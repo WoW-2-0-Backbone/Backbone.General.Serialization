@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Title>WoW2.Backbone.General.Serialization.Json.Abstractions</Title>
+        <PackageId>WoW2.Backbone.General.Serialization.Json.Abstractions</PackageId>
+        <Description>Abstractions for JSON serialization in the Backbone framework</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>serialization, json, abstractions</PackageTags>
+        <Version>8.0.0-alpha.4</Version>
+        <Authors>WoW 2.0 Team</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.Abstractions</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.Abstractions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIcon>wow2.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="wow2.png" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+</Project>
