@@ -6,7 +6,7 @@ namespace Backbone.Language.Features.Serialization.Json.System.Brokers;
 /// <summary>
 /// Provides JSON serializer functionality using Newtonsoft serialization provider with optional serialization settings.
 /// </summary>
-public class SystemJsonSerializer(ISystemJsonSerializationOptionsProvider serializationOptionsProvider) : IJsonSerializer
+public class SystemJsonSerializer(ISystemJsonSerializationOptionsProvider serializationOptionsProvider) : IJsonSerializer, IAsyncJsonSerializer
 {
     /// <summary>
     /// Serializes an object to a JSON representation using System.Text.Json serializer with optional serialization options.

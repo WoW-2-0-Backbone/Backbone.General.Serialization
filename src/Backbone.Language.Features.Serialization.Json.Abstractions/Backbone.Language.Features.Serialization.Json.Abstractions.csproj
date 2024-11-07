@@ -10,7 +10,7 @@
         <Description>Abstractions for JSON serialization in the Backbone framework</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>serialization, json, abstractions</PackageTags>
-        <Version>8.0.0-alpha.0</Version>
+        <Version>8.0.0-alpha.1</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>

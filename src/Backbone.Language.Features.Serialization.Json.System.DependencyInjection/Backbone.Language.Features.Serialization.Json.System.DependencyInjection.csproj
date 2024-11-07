@@ -10,7 +10,7 @@
         <Description>Dependency injection support for JSON serialization with System.Text.Json in language feature sets</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>serialization, json, system-text-json, dependency-injection, infrastructure</PackageTags>
-        <Version>8.0.0-alpha.0</Version>
+        <Version>8.0.0-alpha.1</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
