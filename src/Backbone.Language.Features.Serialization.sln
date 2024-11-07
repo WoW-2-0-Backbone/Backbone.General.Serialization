@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System", "System", "{B31AF7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters", "Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters\Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters.csproj", "{EB58F153-D40A-40F4-8BE3-F1E482D36F68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.Language.Features.Serialization.Json.Newtonsoft.DependencyInjection", "Backbone.Language.Features.Serialization.Json.Newtonsoft.DependencyInjection\Backbone.Language.Features.Serialization.Json.Newtonsoft.DependencyInjection.csproj", "{6407C4EE-1CFC-436D-9854-5B08CE576809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.Language.Features.Serialization.Json.System.DependencyInjection", "Backbone.Language.Features.Serialization.Json.System.DependencyInjection\Backbone.Language.Features.Serialization.Json.System.DependencyInjection.csproj", "{FC8446A4-2F1C-4B64-BFCB-056E0D980F4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,10 +38,20 @@ Global
 		{EB58F153-D40A-40F4-8BE3-F1E482D36F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB58F153-D40A-40F4-8BE3-F1E482D36F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB58F153-D40A-40F4-8BE3-F1E482D36F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6407C4EE-1CFC-436D-9854-5B08CE576809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6407C4EE-1CFC-436D-9854-5B08CE576809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6407C4EE-1CFC-436D-9854-5B08CE576809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6407C4EE-1CFC-436D-9854-5B08CE576809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8446A4-2F1C-4B64-BFCB-056E0D980F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8446A4-2F1C-4B64-BFCB-056E0D980F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8446A4-2F1C-4B64-BFCB-056E0D980F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8446A4-2F1C-4B64-BFCB-056E0D980F4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FED19D5C-C11F-44E3-A986-1E20AB866297} = {10E5C3A7-AB63-42A0-8464-B2F6910188BB}
 		{39D49AFA-94E2-476C-87C2-46EDFEB21580} = {B31AF730-60AA-4C7F-BFB9-9FC93AADAE30}
 		{EB58F153-D40A-40F4-8BE3-F1E482D36F68} = {10E5C3A7-AB63-42A0-8464-B2F6910188BB}
+		{6407C4EE-1CFC-436D-9854-5B08CE576809} = {10E5C3A7-AB63-42A0-8464-B2F6910188BB}
+		{FC8446A4-2F1C-4B64-BFCB-056E0D980F4D} = {B31AF730-60AA-4C7F-BFB9-9FC93AADAE30}
 	EndGlobalSection
 EndGlobal

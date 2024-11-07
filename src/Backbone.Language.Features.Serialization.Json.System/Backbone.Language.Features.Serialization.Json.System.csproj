@@ -23,10 +23,6 @@
         <None Include="wow2.png" Pack="true" PackagePath=""/>
         <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
-    
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Abstractions" Version="8.0.0-alpha.0"/>
