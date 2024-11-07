@@ -47,22 +47,6 @@ public class NewtonsoftJsonSerializer : IJsonSerializer
     }
 
     /// <summary>
-    /// Serializes an object to a JSON representation using Newtonsoft serializer with optional serialization settings.
-    /// </summary>
-    public async ValueTask<string> SerializeAsync<T>(T data, string? serializationSettingsKey = null)
-    {
-        return await Task.Run(() => Serialize(data, serializationSettingsKey));
-    }
-
-    /// <summary>
-    /// Deserializes a JSON representation to an object using Newtonsoft serializer with optional serialization settings.
-    /// </summary>
-    public async ValueTask<T> DeserializeAsync<T>(string json, string? serializationSettingsKey = null)
-    {
-        return await Task.Run(() => Deserialize<T>(json, serializationSettingsKey));
-    }
-
-    /// <summary>
     /// Gets the appropriate JsonSerializer based on the serialization settings key.
     /// </summary>
     private JsonSerializer GetSerializerBySettingsKey(string? serializationSettingsKey)

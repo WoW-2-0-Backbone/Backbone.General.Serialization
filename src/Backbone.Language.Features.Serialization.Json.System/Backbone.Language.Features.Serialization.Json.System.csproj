@@ -10,7 +10,7 @@
         <Description>JSON serialization implementation using System.Text.Json</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>serialization, json, infrastructure</PackageTags>
-        <Version>8.0.0-alpha.0</Version>
+        <Version>8.0.0-alpha.1</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
@@ -23,13 +23,9 @@
         <None Include="wow2.png" Pack="true" PackagePath=""/>
         <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
-    
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
-    </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Abstractions" Version="8.0.0-alpha.0"/>
+        <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Abstractions" Version="8.0.0-alpha.1"/>
     </ItemGroup>
 
 </Project>

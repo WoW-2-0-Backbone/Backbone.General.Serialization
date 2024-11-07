@@ -5,12 +5,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.Language.Features.Serialization.Json.Abstractions</Title>
-        <PackageId>WoW2.Backbone.Language.Features.Serialization.Json.Abstractions</PackageId>
-        <Description>Abstractions for JSON serialization in the Backbone framework</Description>
+        <Title>WoW2.Backbone.Language.Features.Serialization.Json.Newtonsoft.DependencyInjection</Title>
+        <PackageId>WoW2.Backbone.Language.Features.Serialization.Json.Newtonsoft.DependencyInjection</PackageId>
+        <Description>Dependency injection support for JSON serialization with Newtonsoft.Json in language feature sets</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>serialization, json, abstractions</PackageTags>
-        <Version>8.0.0-alpha.1</Version>
+        <PackageTags>serialization, json, newtonsoft, dependency-injection, infrastructure</PackageTags>
+        <Version>8.0.0-alpha.2</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
@@ -22,6 +22,14 @@
     <ItemGroup>
         <None Include="wow2.png" Pack="true" PackagePath=""/>
         <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Newtonsoft" Version="8.0.0-alpha.2" />
     </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@ using Backbone.Language.Features.Serialization.Json.Abstractions.Brokers;
 using Backbone.Language.Features.Serialization.Json.Newtonsoft.Brokers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.Configurations;
+namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.DependencyInjection.Configurations;
 
 /// <summary>
 /// Provides extension methods to configure the serialization provider.
