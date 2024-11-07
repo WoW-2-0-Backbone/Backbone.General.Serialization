@@ -5,16 +5,16 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.General.Serialization.Json.Abstractions</Title>
-        <PackageId>WoW2.Backbone.General.Serialization.Json.Abstractions</PackageId>
+        <Title>WoW2.Backbone.Language.Features.Serialization.Json.Abstractions</Title>
+        <PackageId>WoW2.Backbone.Language.Features.Serialization.Json.Abstractions</PackageId>
         <Description>Abstractions for JSON serialization in the Backbone framework</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>serialization, json, abstractions</PackageTags>
-        <Version>8.0.0-alpha.4</Version>
+        <Version>8.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.Abstractions</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.Abstractions</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageIcon>wow2.png</PackageIcon>
     </PropertyGroup>

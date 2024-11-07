@@ -1,4 +1,4 @@
-namespace Backbone.General.Serialization.Json.Abstractions.Constants;
+namespace Backbone.Language.Features.Serialization.Json.Abstractions.Constants;
 
 /// <summary>
 /// Contains JSON serialization constants.

@@ -1,8 +1,8 @@
-using Backbone.General.Serialization.Json.Abstractions.Brokers;
-using Backbone.General.Serialization.Json.System.Brokers;
+using Backbone.Language.Features.Serialization.Json.Abstractions.Brokers;
+using Backbone.Language.Features.Serialization.Json.System.Brokers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Backbone.General.Serialization.Json.System.Configurations;
+namespace Backbone.Language.Features.Serialization.Json.System.Configurations;
 
 /// <summary>
 /// Provides extension methods to configure the serialization provider.

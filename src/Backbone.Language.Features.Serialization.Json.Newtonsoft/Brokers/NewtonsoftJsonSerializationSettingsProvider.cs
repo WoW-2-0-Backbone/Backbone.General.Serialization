@@ -1,8 +1,8 @@
-using Backbone.General.Serialization.Json.Abstractions.Constants;
+using Backbone.Language.Features.Serialization.Json.Abstractions.Constants;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Backbone.General.Serialization.Json.Newtonsoft.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.Brokers;
 
 /// <summary>
 /// Provides JSON serialization settings for Newtonsoft serialization provider to customize serialization
@@ -11,6 +11,9 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
 {
     private readonly Dictionary<string, JsonSerializerSettings> _settingsDictionary;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NewtonsoftJsonSerializationSettingsProvider"/> class with default settings.
+    /// </summary>
     public NewtonsoftJsonSerializationSettingsProvider()
     {
         _settingsDictionary = new Dictionary<string, JsonSerializerSettings>
@@ -20,11 +23,13 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
         };
     }
 
+    /// <inheritdoc />
     public JsonSerializerSettings Get()
     {
         return new JsonSerializerSettings(_settingsDictionary[JsonSerializationConstants.GeneralSerializationSettings]);
     }
 
+    /// <inheritdoc />
     public JsonSerializerSettings Get(string serializationSettingsKey)
     {
         return _settingsDictionary.TryGetValue(serializationSettingsKey, out var value)
@@ -32,16 +37,19 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
             : throw new KeyNotFoundException("The specified JSON serialization settings with key does not exist.");
     }
 
+    /// <inheritdoc />
     public JsonSerializerSettings GetWithTypeHandling()
     {
         return new JsonSerializerSettings(_settingsDictionary[JsonSerializationConstants.GeneralSerializationSettings]);
     }
 
+    /// <inheritdoc />
     public void Add(string serializationSettingsKey, JsonSerializerSettings settings)
     {
         _settingsDictionary[serializationSettingsKey] = settings;
     }
 
+    /// <inheritdoc />
     public void Update(string serializationSettingsKey, JsonSerializerSettings newSettings)
     {
         _settingsDictionary[serializationSettingsKey] = _settingsDictionary.ContainsKey(serializationSettingsKey)
@@ -49,11 +57,13 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
             : throw new KeyNotFoundException("The specified JSON serialization settings with key does not exist.");
     }
 
+    /// <inheritdoc />
     public bool Remove(string serializationSettingsKey)
     {
         return _settingsDictionary.Remove(serializationSettingsKey);
     }
 
+    /// <inheritdoc />
     public JsonSerializerSettings Configure(JsonSerializerSettings settings)
     {
         // Configures the output JSON formatting for readability
@@ -71,6 +81,7 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
         return settings;
     }
 
+    /// <inheritdoc />
     public JsonSerializerSettings ConfigureWithTypeHandling(JsonSerializerSettings settings)
     {
         Configure(settings);

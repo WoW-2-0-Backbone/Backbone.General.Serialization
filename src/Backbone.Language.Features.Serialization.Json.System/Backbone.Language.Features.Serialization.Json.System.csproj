@@ -5,16 +5,16 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.General.Serialization.Json.System</Title>
-        <PackageId>WoW2.Backbone.General.Serialization.Json.System</PackageId>
+        <Title>WoW2.Backbone.Language.Features.Serialization.Json.System</Title>
+        <PackageId>WoW2.Backbone.Language.Features.Serialization.Json.System</PackageId>
         <Description>JSON serialization implementation using System.Text.Json</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>serialization, json, infrastructure</PackageTags>
         <Version>8.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.System</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.System</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageIcon>wow2.png</PackageIcon>
     </PropertyGroup>
@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="WoW2.Backbone.General.Serialization.Json.Abstractions" Version="8.0.0-alpha.4"/>
+        <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Abstractions" Version="8.0.0-alpha.0"/>
     </ItemGroup>
 
 </Project>

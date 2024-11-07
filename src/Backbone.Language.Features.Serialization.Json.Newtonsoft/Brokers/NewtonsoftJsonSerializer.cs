@@ -1,8 +1,8 @@
-using Backbone.General.Serialization.Json.Abstractions.Brokers;
-using Backbone.General.Serialization.Json.Abstractions.Constants;
+using Backbone.Language.Features.Serialization.Json.Abstractions.Brokers;
+using Backbone.Language.Features.Serialization.Json.Abstractions.Constants;
 using Newtonsoft.Json;
 
-namespace Backbone.General.Serialization.Json.Newtonsoft.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.Brokers;
 
 /// <summary>
 /// Provides JSON serializer functionality using Newtonsoft serialization provider with optional serialization settings.
@@ -14,6 +14,10 @@ public class NewtonsoftJsonSerializer : IJsonSerializer
     private readonly JsonSerializer _generalSerializer;
     private readonly JsonSerializer _generalWithTypeHandlingSerializer;
 
+    /// <summary>
+    /// Initializes a new instance of <see cref="NewtonsoftJsonSerializer"/> with default serializers.
+    /// </summary>
+    /// <param name="serializationSettingsProvider"></param>
     public NewtonsoftJsonSerializer(INewtonsoftJsonSerializationSettingsProvider serializationSettingsProvider)
     {
         _serializationSettingsProvider = serializationSettingsProvider;

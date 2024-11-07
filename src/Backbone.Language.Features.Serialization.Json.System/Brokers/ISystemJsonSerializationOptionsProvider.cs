@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Backbone.General.Serialization.Json.System.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.System.Brokers;
 
 /// <summary>
 /// Defines JSON serialization options provider for System.Text.Json serialization provider to customize serialization.

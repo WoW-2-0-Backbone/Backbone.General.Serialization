@@ -1,36 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+    
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.General.Serialization.Json.Newtonsoft</Title>
-        <PackageId>WoW2.Backbone.General.Serialization.Json.Newtonsoft</PackageId>
-        <Description>JSON serialization implementation using Newtonsoft.Json</Description>
+        <Title>WoW2.Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters</Title>
+        <PackageId>WoW2.Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters</PackageId>
+        <Description>Custom converters for JSON serialization using Newtonsoft.Json in language feature sets</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>serialization, json, newtonsoft, infrastructure</PackageTags>
+        <PackageTags>serialization, json, newtonsoft, converters, language-features, infrastructure</PackageTags>
         <Version>8.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.Newtonsoft</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Serialization.Json.Newtonsoft</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageIcon>wow2.png</PackageIcon>
     </PropertyGroup>
-
+    
     <ItemGroup>
         <None Include="wow2.png" Pack="true" PackagePath=""/>
         <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
     </ItemGroup>
-
+    
     <ItemGroup>
-        <PackageReference Include="WoW2.Backbone.General.Serialization.Json.Abstractions" Version="8.0.0-alpha.4"/>
+        <PackageReference Include="WoW2.Backbone.Language.Core.Extensions.Enums" Version="8.0.0-alpha.0" />
     </ItemGroup>
 
 </Project>
