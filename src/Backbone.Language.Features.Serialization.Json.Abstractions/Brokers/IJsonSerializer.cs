@@ -1,4 +1,4 @@
-namespace Backbone.General.Serialization.Json.Abstractions.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.Abstractions.Brokers;
 
 /// <summary>
 /// Defines JSON serializer functionality with optional serialization settings.

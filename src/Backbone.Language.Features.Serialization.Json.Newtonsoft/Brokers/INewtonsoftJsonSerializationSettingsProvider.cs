@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Backbone.General.Serialization.Json.Newtonsoft.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.Brokers;
 
 /// <summary>
 /// Defines JSON serialization settings provider for Newtonsoft serialization provider to customize serialization.

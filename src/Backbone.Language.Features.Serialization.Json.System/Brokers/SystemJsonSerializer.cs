@@ -1,7 +1,7 @@
 using System.Text.Json;
-using Backbone.General.Serialization.Json.Abstractions.Brokers;
+using Backbone.Language.Features.Serialization.Json.Abstractions.Brokers;
 
-namespace Backbone.General.Serialization.Json.System.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.System.Brokers;
 
 /// <summary>
 /// Provides JSON serializer functionality using Newtonsoft serialization provider with optional serialization settings.

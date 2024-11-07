@@ -1,9 +1,9 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
-using Backbone.General.Serialization.Json.Abstractions.Constants;
+using Backbone.Language.Features.Serialization.Json.Abstractions.Constants;
 
-namespace Backbone.General.Serialization.Json.System.Brokers;
+namespace Backbone.Language.Features.Serialization.Json.System.Brokers;
 
 /// <summary>
 /// Provides JSON serialization options for System.Text.Json serialization provider to customize serialization.
@@ -21,11 +21,13 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
         };
     }
 
+    /// <inheritdoc />
     public JsonSerializerOptions Get()
     {
         return new JsonSerializerOptions(_optionsDictionary[JsonSerializationConstants.GeneralSerializationSettings]);
     }
 
+    /// <inheritdoc />
     public JsonSerializerOptions Get(string serializationOptionsKey)
     {
         return _optionsDictionary.TryGetValue(serializationOptionsKey, out var value)
@@ -33,28 +35,33 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
             : throw new KeyNotFoundException("The specified JSON serialization options with key does not exist.");
     }
 
+    /// <inheritdoc />
     public JsonSerializerOptions GetWithTypeHandling()
     {
         return new JsonSerializerOptions(_optionsDictionary[JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings]);
     }
 
+    /// <inheritdoc />
     public void Add(string serializationOptionsKey, JsonSerializerOptions options)
     {
         _optionsDictionary[serializationOptionsKey] = options;
     }
-
+    
+    /// <inheritdoc />
     public void Update(string serializationOptionsKey, JsonSerializerOptions newOptions)
     {
         _optionsDictionary[serializationOptionsKey] = _optionsDictionary.ContainsKey(serializationOptionsKey)
             ? newOptions
             : throw new KeyNotFoundException("The specified JSON serialization options with key does not exist.");
     }
-
+    
+    /// <inheritdoc />
     public bool Remove(string serializationOptionsKey)
     {
         return _optionsDictionary.Remove(serializationOptionsKey);
     }
-
+    
+    /// <inheritdoc />
     public JsonSerializerOptions Configure(JsonSerializerOptions options)
     {
         // Configures the output JSON formatting for readability
@@ -68,7 +75,8 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
 
         return options;
     }
-
+    
+    /// <inheritdoc />
     public JsonSerializerOptions ConfigureWithTypeHandling(JsonSerializerOptions options)
     {
         Configure(options);
