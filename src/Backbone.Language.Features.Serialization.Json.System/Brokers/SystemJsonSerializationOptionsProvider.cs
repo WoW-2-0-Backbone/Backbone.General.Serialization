@@ -12,12 +12,17 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
 {
     private readonly Dictionary<string, JsonSerializerOptions> _optionsDictionary;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SystemJsonSerializationOptionsProvider"/> class with default settings.
+    /// </summary>
     public SystemJsonSerializationOptionsProvider()
     {
         _optionsDictionary = new Dictionary<string, JsonSerializerOptions>
         {
-            [JsonSerializationConstants.GeneralSerializationSettings] = Configure(new JsonSerializerOptions()),
-            [JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings] = ConfigureWithTypeHandling(new JsonSerializerOptions())
+            [JsonSerializationConstants.GeneralSerializationSettings] =
+                Configure(new JsonSerializerOptions()),
+            [JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings] =
+                ConfigureWithTypeHandling(new JsonSerializerOptions())
         };
     }
 
@@ -38,7 +43,8 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
     /// <inheritdoc />
     public JsonSerializerOptions GetWithTypeHandling()
     {
-        return new JsonSerializerOptions(_optionsDictionary[JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings]);
+        return new JsonSerializerOptions(
+            _optionsDictionary[JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings]);
     }
 
     /// <inheritdoc />
@@ -46,7 +52,7 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
     {
         _optionsDictionary[serializationOptionsKey] = options;
     }
-    
+
     /// <inheritdoc />
     public void Update(string serializationOptionsKey, JsonSerializerOptions newOptions)
     {
@@ -54,13 +60,13 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
             ? newOptions
             : throw new KeyNotFoundException("The specified JSON serialization options with key does not exist.");
     }
-    
+
     /// <inheritdoc />
     public bool Remove(string serializationOptionsKey)
     {
         return _optionsDictionary.Remove(serializationOptionsKey);
     }
-    
+
     /// <inheritdoc />
     public JsonSerializerOptions Configure(JsonSerializerOptions options)
     {
@@ -75,7 +81,7 @@ public class SystemJsonSerializationOptionsProvider : ISystemJsonSerializationOp
 
         return options;
     }
-    
+
     /// <inheritdoc />
     public JsonSerializerOptions ConfigureWithTypeHandling(JsonSerializerOptions options)
     {

@@ -18,8 +18,10 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
     {
         _settingsDictionary = new Dictionary<string, JsonSerializerSettings>
         {
-            [JsonSerializationConstants.GeneralSerializationSettings] = Configure(new JsonSerializerSettings()),
-            [JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings] = ConfigureWithTypeHandling(new JsonSerializerSettings())
+            [JsonSerializationConstants.GeneralSerializationSettings] =
+                Configure(new JsonSerializerSettings()),
+            [JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings] =
+                ConfigureWithTypeHandling(new JsonSerializerSettings())
         };
     }
 
@@ -40,7 +42,8 @@ public class NewtonsoftJsonSerializationSettingsProvider : INewtonsoftJsonSerial
     /// <inheritdoc />
     public JsonSerializerSettings GetWithTypeHandling()
     {
-        return new JsonSerializerSettings(_settingsDictionary[JsonSerializationConstants.GeneralSerializationSettings]);
+        return new JsonSerializerSettings(
+            _settingsDictionary[JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings]);
     }
 
     /// <inheritdoc />
