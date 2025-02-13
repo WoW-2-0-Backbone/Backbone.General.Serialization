@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -10,7 +10,7 @@
         <Description>JSON serialization implementation using Newtonsoft.Json</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>serialization, json, newtonsoft, infrastructure</PackageTags>
-        <Version>8.0.0-alpha.2</Version>
+        <Version>9.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Features.Serialization</PackageProjectUrl>
@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Abstractions" Version="8.0.0-alpha.1"/>
+        <PackageReference Include="WoW2.Backbone.Language.Features.Serialization.Json.Abstractions" Version="9.0.0-alpha.0" />
     </ItemGroup>
 
 </Project>

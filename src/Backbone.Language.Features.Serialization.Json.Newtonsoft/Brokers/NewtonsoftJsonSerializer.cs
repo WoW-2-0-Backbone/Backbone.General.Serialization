@@ -23,9 +23,11 @@ public class NewtonsoftJsonSerializer : IJsonSerializer
         _serializationSettingsProvider = serializationSettingsProvider;
 
         _defaultSerializer = new JsonSerializer();
-        _generalSerializer = JsonSerializer.Create(_serializationSettingsProvider.Get(JsonSerializationConstants.GeneralSerializationSettings));
+        _generalSerializer = JsonSerializer.Create(
+            _serializationSettingsProvider.Get(JsonSerializationConstants.GeneralSerializationSettings));
         _generalWithTypeHandlingSerializer = JsonSerializer.Create(
-            _serializationSettingsProvider.Get(JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings));
+            _serializationSettingsProvider.Get(JsonSerializationConstants
+                .GeneralSerializationWithTypeHandlingSettings));
     }
 
     /// <summary>
@@ -55,7 +57,8 @@ public class NewtonsoftJsonSerializer : IJsonSerializer
         {
             null => _defaultSerializer,
             JsonSerializationConstants.GeneralSerializationSettings => _generalSerializer,
-            JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings => _generalWithTypeHandlingSerializer,
+            JsonSerializationConstants.GeneralSerializationWithTypeHandlingSettings =>
+                _generalWithTypeHandlingSerializer,
             _ => JsonSerializer.Create(_serializationSettingsProvider.Get(serializationSettingsKey))
         };
     }

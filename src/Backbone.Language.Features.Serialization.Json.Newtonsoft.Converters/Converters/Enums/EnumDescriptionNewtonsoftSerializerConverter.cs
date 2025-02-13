@@ -1,24 +1,23 @@
 using Backbone.Language.Core.Extensions.Enums.Extensions;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
-namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters.Converters;
+namespace Backbone.Language.Features.Serialization.Json.Newtonsoft.Converters.Converters.Enums;
 
 /// <summary>
-/// Represents a Newtonsoft JSON converter for enums with description attribute value.
+/// Represents an enum converter by enum field for Newtonsoft JSON Serializer
 /// </summary>
-public class DescriptionEnumConverter<T> : StringEnumConverter where T : struct, Enum
+/// <typeparam name="T">The enum type to be converted.</typeparam>
+public class EnumDescriptionNewtonsoftSerializerConverter<T> : JsonConverter where T : struct, Enum
 {
     private readonly Dictionary<string, T> _descriptionToEnum;
     private readonly Dictionary<T, string> _enumToDescription;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="DescriptionEnumConverter{T}"/> class.
+    /// Initializes field enum converter and enum to description and vice versa mappings
     /// </summary>
-    public DescriptionEnumConverter()
+    public EnumDescriptionNewtonsoftSerializerConverter()
     {
-        _descriptionToEnum = Enum.GetValues(typeof(T))
-            .Cast<T>()
+        _descriptionToEnum = Enum.GetValues<T>()
             .ToDictionary(
                 e => e.GetDescription(),
                 e => e,
@@ -34,8 +33,7 @@ public class DescriptionEnumConverter<T> : StringEnumConverter where T : struct,
     {
         if (value is T enumValue)
         {
-            var description = _enumToDescription[enumValue];
-            writer.WriteValue(description);
+            writer.WriteValue(_enumToDescription[enumValue]);
         }
         else
         {
@@ -44,13 +42,19 @@ public class DescriptionEnumConverter<T> : StringEnumConverter where T : struct,
     }
 
     /// <inheritdoc />
-    public override object ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
+    public override object ReadJson(JsonReader reader, Type objectType, object? existingValue,
+        JsonSerializer serializer)
     {
         var enumString = reader.Value?.ToString();
-        if (enumString != null && _descriptionToEnum.TryGetValue(enumString, out var enumValue))
-        {
-            return enumValue;
-        }
+        if (enumString != null && _descriptionToEnum.TryGetValue(enumString, out var result))
+            return result;
+
         throw new JsonSerializationException($"Unknown enum description '{enumString}' for type '{typeof(T)}'.");
+    }
+
+    /// <inheritdoc />
+    public override bool CanConvert(Type objectType)
+    {
+        return objectType.IsEnum;
     }
 }
